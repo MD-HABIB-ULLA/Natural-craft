@@ -136,11 +136,11 @@ const Navber = () => {
                 </div>
                 {isDropdownOpen && (
                   <div
-                    className="absolute top-full right-0 mt-1 w-52 bg-[#3b38386c] duration-500 dark:bg-[#ffffff49] p-5  rounded-md shadow-lg"
+                    className="absolute z-50 top-full right-0 mt-1 w-52 bg-[#181414cc] duration-500  p-5  rounded-md shadow-lg"
                     onMouseEnter={handleDropdownHover}
                     onMouseLeave={handleDropdownLeave}
                   >
-                    <ul className="dark:text-white text-black font-bold duration-500">
+                    <ul className="text-white  font-bold duration-500">
                       <li>{user.displayName}</li>
                       <li>
                         <button
