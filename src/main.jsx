@@ -7,15 +7,23 @@ import Home from "./Pages/Home.jsx";
 import Login from "./Pages/Login.jsx";
 import Ragister from "./Pages/Ragister.jsx";
 import AuthProvider from "./Provider/AuthProvider.jsx";
+import ErrorPage from "./Pages/ErrorPage.jsx";
+import Additem from "./Pages/Additem.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <Home /> },
+      {
+        path: "/",
+        loader: () => fetch("http://localhost:4000/craftItems"),
+        element: <Home />,
+      },
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Ragister /> },
+      { path: "/addcraftitem", element: <Additem /> },
     ],
   },
 ]);

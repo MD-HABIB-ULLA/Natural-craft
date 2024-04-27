@@ -54,7 +54,7 @@ const Navber = () => {
         className={({ isActive }) =>
           `text-base px-3 p-1  ml-2 text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
             isActive
-              ? " font-bold rounded-lg bg-[#00c19411] "
+              ? " font-bold rounded-lg  bg-[#e4c49e41]"
               : "font-normal  border-none"
           } `
         }
@@ -62,11 +62,11 @@ const Navber = () => {
         All Art & craft Items
       </NavLink>
       <NavLink
-        to="/aboutus"
+        to="/addcraftitem"
         className={({ isActive }) =>
           `text-base px-3 p-1  ml-2 text-[#322C2B] duration-500 dark:text-[#E4C59E]  ${
             isActive
-              ? " font-bold rounded-lg bg-[#00c19411] "
+              ? " font-bold rounded-lg  bg-[#e4c49e41]"
               : "font-normal  border-none"
           } `
         }
@@ -78,7 +78,7 @@ const Navber = () => {
         className={({ isActive }) =>
           `text-base px-3 p-1  ml-2 text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
             isActive
-              ? " font-bold rounded-lg bg-[#00c19411]  "
+              ? " font-bold rounded-lg  bg-[#e4c49e41] "
               : "font-normal  border-none"
           } `
         }
