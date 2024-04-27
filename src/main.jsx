@@ -9,6 +9,8 @@ import Ragister from "./Pages/Ragister.jsx";
 import AuthProvider from "./Provider/AuthProvider.jsx";
 import ErrorPage from "./Pages/ErrorPage.jsx";
 import Additem from "./Pages/Additem.jsx";
+import AllCraftItems from "./Pages/AllCraftItems.jsx";
+import MyCraftItem from "./Pages/MyCraftItem.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,16 @@ const router = createBrowserRouter([
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Ragister /> },
       { path: "/addcraftitem", element: <Additem /> },
+      {
+        path: "/allcraftitems",
+        loader: () => fetch("http://localhost:4000/craftItems"),
+        element: <AllCraftItems />,
+      },
+      {
+        path: "/mycraftitem",
+        loader: () => fetch("http://localhost:4000/craftItems"),
+        element: <MyCraftItem />,
+      },
     ],
   },
 ]);

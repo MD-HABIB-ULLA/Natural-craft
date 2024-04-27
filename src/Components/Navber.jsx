@@ -50,7 +50,7 @@ const Navber = () => {
         Home
       </NavLink>
       <NavLink
-        to="/aboutus"
+        to="/allcraftitems"
         className={({ isActive }) =>
           `text-base px-3 p-1  ml-2 text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
             isActive
@@ -59,7 +59,7 @@ const Navber = () => {
           } `
         }
       >
-        All Art & craft Items
+        All Jute & wooden Crafts Items
       </NavLink>
       <NavLink
         to="/addcraftitem"
@@ -82,9 +82,9 @@ const Navber = () => {
               : "font-normal  border-none"
           } `
         }
-        to="/update-profile"
+        to="/mycraftitem"
       >
-        My Art&Craft List
+        My Jute & wooden Crafts List
       </NavLink>
     </>
   );
@@ -123,15 +123,15 @@ const Navber = () => {
             <span className="loading loading-spinner text-warning"></span>
           ) : user?.email ? (
             <div className="flex items-center gap-4">
-              <div className="relative">
+              <div className="relative avatar">
                 <div
                   onMouseEnter={handleButtonHover}
-                  className="w-10 h-10 rounded-full ring ring-[#E4C59E] dark:ring-[#e4c49e69] ring-offset-white duration-500 ring-offset-2"
+                  className=" w-10 rounded-full ring ring-[#E4C59E] dark:ring-[#e4c49e69] ring-offset-white duration-500 ring-offset-2"
                 >
                   <img
                     src={user.photoURL}
                     alt="User Avatar"
-                    className="rounded-full"
+                    className=""
                   />
                 </div>
                 {isDropdownOpen && (
