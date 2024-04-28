@@ -17,7 +17,7 @@ const Category = () => {
       >
         {craftData[0].subcategory_name}
       </div>
-      <div className=" grid grid-cols-3 my-20 container m-auto gap-3">
+      <div className=" grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1 my-20 container m-auto gap-3">
         {craftData.map((singleCraftItem, i) => (
           <div
             key={i}

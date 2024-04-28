@@ -40,7 +40,7 @@ const Navber = () => {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          `text-base px-3 p-1  ml-2 text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
+          `text-base px-3 p-1  ml-2 text-white   sm:text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
             isActive
               ? " font-bold rounded-lg bg-[#e4c49e41]  "
               : "font-normal  border-none"
@@ -52,7 +52,7 @@ const Navber = () => {
       <NavLink
         to="/allcraftitems"
         className={({ isActive }) =>
-          `text-base px-3 p-1  ml-2 text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
+          `text-base px-3 p-1 text-white  ml-2 sm:text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
             isActive
               ? " font-bold rounded-lg  bg-[#e4c49e41]"
               : "font-normal  border-none"
@@ -64,7 +64,7 @@ const Navber = () => {
       <NavLink
         to="/addcraftitem"
         className={({ isActive }) =>
-          `text-base px-3 p-1  ml-2 text-[#322C2B] duration-500 dark:text-[#E4C59E]  ${
+          `text-base px-3 p-1  text-white ml-2 sm:text-[#322C2B] duration-500 dark:text-[#E4C59E]  ${
             isActive
               ? " font-bold rounded-lg  bg-[#e4c49e41]"
               : "font-normal  border-none"
@@ -76,7 +76,7 @@ const Navber = () => {
 
       <NavLink
         className={({ isActive }) =>
-          `text-base px-3 p-1  ml-2 text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
+          `text-base px-3 p-1  text-white ml-2 sm:text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
             isActive
               ? " font-bold rounded-lg  bg-[#e4c49e41] "
               : "font-normal  border-none"
@@ -102,7 +102,7 @@ const Navber = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1]  shadow bg-[#1b1919ce] rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[50]  shadow  bg-[#1b1919da] rounded-box w-52"
             >
               {list}
             </ul>
