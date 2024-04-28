@@ -10,10 +10,17 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Link, useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Home = () => {
   const craftData = useLoaderData();
-  console.log(craftData);
+  const [catagories, setCatagories] = useState([]);
+  useEffect(() => {
+    fetch("https://project-10-server-topaz.vercel.app/subcategory_name")
+      .then((res) => res.json())
+      .then((data) => setCatagories(data));
+  }, []);
+  console.log(catagories);
   return (
     <>
       <div>
@@ -173,7 +180,8 @@ const Home = () => {
                       </p>
                     </div>
                     <div className="p-6 pt-0">
-                      <Link to={`/craftItems/${singleCraftItem._id}`}
+                      <Link
+                        to={`/craftItems/${singleCraftItem._id}`}
                         data-ripple-light="true"
                         type="button"
                         className="btn border-none bg-[#e4c49e]  font-bold hover:bg-[#e4c49e93]"
@@ -199,6 +207,27 @@ const Home = () => {
               <span className="h-16 w-16 loading loading-spinner text-warning"></span>
             </div>
           )}
+        </div>
+
+        {/* sub catagory section */}
+        <div className="text-5xl mb-10 text-center font-bold mt-20 dark:text-white text-[#361A19]">
+          <h1>Jute & wooden Crafts Categories</h1>
+        </div>
+        <div className=" grid grid-cols-2 container m-auto px-10 my-10 gap-10">
+          {catagories.map((catagorie, i) => (
+            <div key={i} className=" h-60">
+              <div
+                className="h-full bg-cover bg-center text-white  rounded-2xl "
+                style={{
+                  backgroundImage: `url(${catagorie.image})`,
+                }}
+              >
+                <p className="flex items-end justify-start h-full w-full bg-gradient-to-t from-gray-900 text-3xl pb-3 pl-3 font-bold rounded-2xl">
+                  {catagorie.subcategory_name}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>

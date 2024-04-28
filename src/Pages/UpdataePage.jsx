@@ -37,7 +37,7 @@ const UpdataePage = () => {
     };
     console.log(itemData);
 
-    fetch(`http://localhost:4000/craftItems/${id}`, {
+    fetch(`https://project-10-server-topaz.vercel.app/craftItems/${id}`, {
       method: "put",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(itemData),

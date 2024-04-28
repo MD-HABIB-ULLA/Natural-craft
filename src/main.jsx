@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("http://localhost:4000/craftItems"),
+        loader: () => fetch("https://project-10-server-topaz.vercel.app/craftItems"),
         element: <Home />,
       },
       {
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/craftItems/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/craftItems/${params.id}`),
+          fetch(`https://project-10-server-topaz.vercel.app/craftItems/${params.id}`),
         element: (
           <PrivateRoute>
             <Deatails />
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/craftItems/${params.id}`),
+          fetch(`https://project-10-server-topaz.vercel.app/craftItems/${params.id}`),
         element: (
           <PrivateRoute>
             <UpdataePage />
@@ -64,12 +64,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/allcraftitems",
-        loader: () => fetch("http://localhost:4000/craftItems"),
+        loader: () => fetch("https://project-10-server-topaz.vercel.app/craftItems"),
         element: <AllCraftItems />,
       },
       {
         path: "/mycraftitem",
-        loader: () => fetch("http://localhost:4000/craftItems"),
+        loader: () => fetch("https://project-10-server-topaz.vercel.app/craftItems"),
         element: (
           <PrivateRoute>
             <MyCraftItem />

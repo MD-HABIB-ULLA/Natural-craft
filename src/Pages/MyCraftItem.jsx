@@ -69,7 +69,7 @@ const MyCraftItem = () => {
             text: "Your file has been deleted.",
             icon: "success",
           });
-          fetch(`http://localhost:4000/craftItems/${id}`, { method: "DELETE" })
+          fetch(`https://project-10-server-topaz.vercel.app/craftItems/${id}`, { method: "DELETE" })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {

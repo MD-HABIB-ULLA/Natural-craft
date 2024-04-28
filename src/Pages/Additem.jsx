@@ -35,7 +35,7 @@ const Additem = () => {
     };
     console.log(itemData);
 
-    fetch("http://localhost:4000/craftItems", {
+    fetch("https://project-10-server-topaz.vercel.app/craftItems", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(itemData),
