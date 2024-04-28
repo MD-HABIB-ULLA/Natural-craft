@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Link, useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 
 const Home = () => {
   const craftData = useLoaderData();
@@ -21,6 +22,18 @@ const Home = () => {
       .then((data) => setCatagories(data));
   }, []);
   console.log(catagories);
+
+  const [userInput, setUserInput] = useState("");
+
+  // Handler for submitting user input
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Logic for handling user input (e.g., submitting to a backend, displaying confirmation message)
+    console.log("User submitted:", userInput);
+    // Clear input field after submission
+    setUserInput("");
+  };
+
   return (
     <>
       <div>
@@ -295,6 +308,109 @@ const Home = () => {
               </div>
             </section>
           </div>
+        </div>
+
+        {/* Crafting Inspiration and Tips */}
+
+        <div className="container mx-auto px-4 py-8 dark:text-white text-[#361A19]">
+          <h2 className="text-3xl font-bold mb-6 dark:text-white text-[#361A19]">
+            Crafting Inspiration and Tips
+          </h2>
+          <section className="mb-8">
+            <h3 className="text-xl font-semibold mb-4">
+              DIY Ideas and Tutorials
+            </h3>
+            <p className="mb-4">
+              Explore our collection of DIY tutorials for jute and wood craft
+              projects.
+            </p>
+            <div className="bg-[#20080836] p-6 rounded-lg ">
+              <h4 className="text-lg font-semibold mb-2">
+                Crafting Beauty: The Art of Jute Flower Making
+              </h4>
+              <p className="mb-2">
+                Delve into the captivating world of jute flower crafting, where
+                creativity blossoms into stunning floral masterpieces. In this
+                video, we explore the intricate process of transforming humble
+                jute fibers into exquisite blooms that add a touch of rustic
+                elegance to any décor. Join us as we unravel the secrets behind
+                this age-old craft, from selecting the finest jute strands to
+                mastering the delicate art of shaping petals and assembling each
+                flower with precision. Whether you're a seasoned artisan or a
+                curious beginner, prepare to be inspired as we showcase the
+                beauty and versatility of jute flower artistry
+              </p>
+              <div className="flex flex-col md:flex-row items-center md:space-x-4 gap-3">
+                {/* Add images or videos */}
+                <img
+                  src="https://i.ytimg.com/vi/VSc-B9D6XnA/maxresdefault.jpg"
+                  alt="Tutorial"
+                  className="w-full md:w-1/2"
+                />
+                <div className="player-wrapper md:w-1/2 rounded-lg">
+                  <ReactPlayer
+                    url="https://www.youtube.com/watch?v=KPpzwkiMif4"
+                    width="100%"
+                    className="react-player "
+                    controls={true}
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="mb-8">
+            <h3 className="text-xl font-semibold mb-4">
+              Tips and Recommendations
+            </h3>
+            <p className="mb-4">
+              Find helpful tips on sourcing materials, tools, and getting
+              inspired.
+            </p>
+            <ul className="list-disc ml-6">
+              <li>Tip 1: Where to find high-quality jute materials</li>
+              <li>Tip 2: Essential tools for wood crafting</li>
+              {/* Add more tips */}
+            </ul>
+          </section>
+          <section className="mb-8">
+            <h3 className="text-xl font-semibold mb-4">
+              Gallery of Finished Projects
+            </h3>
+            <p className="mb-4">
+              Be inspired by our community's creative craft projects!
+            </p> 
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-4 bg-[#0502024b] p-10 rounded-lg">
+              {/* Display images of finished projects */}
+              <img className="h-96" src="https://shagunarts.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/7/1/718qryzba3l._sx569_.jpg" alt="Project 1" />
+              <img className="h-96" src="https://shagunarts.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/v/avian-solid-wood-book-shelf-in-provincial-teak-finish-by-woodsworth-avian-solid-wood-book-shelf-in-p-xpkwfo.jpg" alt="Project 2" />
+              {/* Add more images */}
+            </div>
+          </section>
+          <section>
+            <h3 className="text-xl font-semibold mb-4">Share Your Ideas</h3>
+            <p className="mb-4">
+              Got your own craft ideas or questions? Share them with us!
+            </p>
+            {/* Form for submitting user ideas/questions */}
+            <form
+              onSubmit={handleSubmit}
+              className="flex items-center space-x-4"
+            >
+              <input
+                type="text"
+                placeholder="Enter your idea or question"
+                value={userInput}
+                onChange={(event) => setUserInput(event.target.value)}
+                className="border border-gray-300 px-4 py-2 rounded-lg w-3/4"
+              />
+              <button
+                type="submit"
+                className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+              >
+                Submit
+              </button>
+            </form>
+          </section>
         </div>
       </div>
     </>
