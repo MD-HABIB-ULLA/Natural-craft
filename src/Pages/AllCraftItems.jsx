@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const AllCraftItems = () => {
   const craftData = useLoaderData();
@@ -88,13 +88,13 @@ const AllCraftItems = () => {
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <button
-                          data-ripple-light="true"
-                          type="button"
-                          className="btn border-none bg-[#e4c49e]  font-bold hover:bg-[#e4c49e93]"
-                        >
-                          View Details
-                        </button>
+                      <Link to={`/craftItems/${singleCraftItem._id}`}
+                        data-ripple-light="true"
+                        type="button"
+                        className="btn border-none bg-[#e4c49e]  font-bold hover:bg-[#e4c49e93]"
+                      >
+                        View Details
+                      </Link>
                       </td>
                     </tr>
                   ))}

@@ -173,13 +173,13 @@ const Home = () => {
                       </p>
                     </div>
                     <div className="p-6 pt-0">
-                      <button
+                      <Link to={`/craftItems/${singleCraftItem._id}`}
                         data-ripple-light="true"
                         type="button"
                         className="btn border-none bg-[#e4c49e]  font-bold hover:bg-[#e4c49e93]"
                       >
                         View Details
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 ))}

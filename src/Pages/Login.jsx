@@ -59,11 +59,11 @@ const Login = () => {
           error.code === "auth/email-already-in-use"
         ) {
           toast.error("This email alreay exist");
-          // setLoading(false);
+          setLoading(false);
         }
         if (error.code === "auth/popup-closed-by-user") {
           toast.error("Sign-in process was not completed. Please try again.");
-          // setLoading(false);
+          setLoading(false);
         }
       });
   };

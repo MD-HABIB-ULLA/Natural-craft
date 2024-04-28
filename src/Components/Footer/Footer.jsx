@@ -18,6 +18,15 @@ const Footer = () => {
                   <Link to='/' href="#">Home</Link>
                 </li>
                 <li>
+                  <Link to='/allcraftitems' href="#">All Craft Items</Link>
+                </li>
+                <li>
+                  <Link to='/addcraftitem' href="#">Add Craft Item</Link>
+                </li>
+                <li>
+                  <Link to='/mycraftitem' href="#">My Craft Item</Link>
+                </li>
+                <li>
                   <Link to='/login' href="#">Login</Link>
                 </li>
                 <li>
