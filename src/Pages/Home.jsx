@@ -214,20 +214,87 @@ const Home = () => {
           <h1>Jute & wooden Crafts Categories</h1>
         </div>
         <div className=" grid grid-cols-2 container m-auto px-10 my-10 gap-10">
-          {catagories.map((catagorie, i) => (
+          {catagories.map((category, i) => (
             <div key={i} className=" h-60">
               <div
                 className="h-full bg-cover bg-center text-white  rounded-2xl "
                 style={{
-                  backgroundImage: `url(${catagorie.image})`,
+                  backgroundImage: `url(${category.image})`,
                 }}
               >
-                <p className="flex items-end justify-start h-full w-full bg-gradient-to-t from-gray-900 text-3xl pb-3 pl-3 font-bold rounded-2xl">
-                  {catagorie.subcategory_name}
-                </p>
+                <Link
+                  to={`/category/${category.subcategory_name}`}
+                  className="flex items-end justify-start h-full w-full bg-gradient-to-t from-gray-900 hover:bg-[#0f02029c] duration-500 text-3xl pb-3 hover:pb-5 pl-3 font-bold rounded-2xl"
+                >
+                  {category.subcategory_name}
+                </Link>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* jute and wood craft galary Craft Section */}
+
+        <div>
+          <div className="text-5xl mb-10 text-center font-bold mt-20 dark:text-white text-[#361A19]">
+            Wood And Jute Craft Gallery
+          </div>
+          <div>
+            <section className="py-6  dark:text-gray-900">
+              <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
+                <img
+                  src="https://i.ibb.co/Kb1vt44/wooden-furniture-1.jpg"
+                  alt=""
+                  className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-3 md:row-start-1 dark:bg-gray-500 aspect-square"
+                />
+                <img
+                  alt=""
+                  className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
+                  src="https://asiajute.com/wp-content/uploads/2021/04/6763-Mini-Jute-Bag-Best-Selling-Jute-Sack-Bags-Environmentally-Friendly-Natural-Bangladesh-Jute-Bag-Standard-B-Twill-Binola-DW-Double-Warp-Hessian-Burlap-Fabrics-Yarn-Spinning-Sacking.jpg"
+                />
+                <img
+                  alt=""
+                  className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
+                  src="https://m.media-amazon.com/images/I/71i6A7RfSUL._AC_UF894,1000_QL80_.jpg"
+                />
+                <img
+                  alt=""
+                  className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
+                  src="https://img.freepik.com/premium-photo/stylish-retro-composition-elegant-personal-accessories-beautiful-decoration-modern-retro-concept-living-room-home-decor-picture-frames-wood-panelling_431307-2377.jpg"
+                />
+                <img
+                  alt=""
+                  className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
+                  src="https://m.media-amazon.com/images/I/51AKsbWqbiL._AC_UF894,1000_QL80_.jpg"
+                />
+                <img
+                  alt=""
+                  className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
+                  src="https://i.pinimg.com/736x/64/de/2c/64de2c76de3a3048cb06c87a1c81f453.jpg"
+                />
+                <img
+                  alt=""
+                  className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
+                  src="https://shagunarts.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/h/sha-067.jpg"
+                />
+                <img
+                  alt=""
+                  className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
+                  src="https://cdn.decoist.com/wp-content/uploads/2021/06/Wooden-Bookcase-54340.jpg"
+                />
+                <img
+                  alt=""
+                  className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
+                  src="https://media.gettyimages.com/id/1266797621/video/simple-modern-apartment-living-room.jpg?s=640x640&k=20&c=a7NACAT0kmHdj8B5HEhABECHg9lGaiQvOZ84frTq4L0="
+                />
+                <img
+                  src="https://img.staticmb.com/mbcontent/images/crop/uploads/2023/3/wooden-decor-items-for-home-ideas_0_1200.jpg"
+                  alt=""
+                  className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 dark:bg-gray-500 aspect-square"
+                />
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </>

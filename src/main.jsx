@@ -14,6 +14,7 @@ import MyCraftItem from "./Pages/MyCraftItem.jsx";
 import PrivateRoute from "./Private/PrivateRoute.jsx";
 import Deatails from "./Pages/Deatails.jsx";
 import UpdataePage from "./Pages/UpdataePage.jsx";
+import Category from "./Pages/Category.jsx";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,11 @@ const router = createBrowserRouter([
             <Additem />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/category/:subcategory_name",
+        loader: ({ params }) =>fetch(`https://project-10-server-topaz.vercel.app/category/${params.subcategory_name}`),
+        element: <Category />,
       },
       {
         path: "/allcraftitems",
