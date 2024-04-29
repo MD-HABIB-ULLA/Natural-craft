@@ -390,7 +390,7 @@ const Home = () => {
             <p className="mb-4">
               Be inspired by our community's creative craft projects!
             </p>
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-4 bg-[#0502024b] p-10 rounded-lg">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-4 bg-[#20080836] p-10 rounded-lg">
               {/* Display images of finished projects */}
               <img
                 className="h-96"

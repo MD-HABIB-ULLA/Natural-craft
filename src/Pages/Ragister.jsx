@@ -6,6 +6,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const Ragister = () => {
   const location = useLocation();
@@ -133,6 +134,9 @@ const Ragister = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Natural craft - Sign in</title>
+      </Helmet>
       <div style={{ backgroundImage: `url(${bg})` }}>
         <div className="relative py-3 sm:max-w-xl sm:mx-auto w-full ">
           <div className="relative px-4 py-10 dark:bg-[#ffffff1f] bg-[#251c1a2f] duration-500 mx-8 md:mx-0 shadow rounded-3xl sm:p-10 border-[#322C2B] dark:border-[#E4C59E] border-2">

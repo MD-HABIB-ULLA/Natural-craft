@@ -9,6 +9,7 @@ import bg from "../assets/mycrafitem.svg";
 import { FaStar } from "react-icons/fa";
 import toast from "react-hot-toast";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 const MyCraftItem = () => {
   const [craftData, setCraftData] = useState([]);
@@ -95,6 +96,9 @@ const MyCraftItem = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Natural craft - My craft item</title>
+      </Helmet>
       <div
         style={{
           backgroundImage:
