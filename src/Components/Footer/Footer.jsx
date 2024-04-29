@@ -15,24 +15,35 @@ const Footer = () => {
               </h3>
               <ul className="space-y-1">
                 <li>
-                  <Link to='/' href="#">Home</Link>
+                  <Link to="/" href="#">
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <Link to='/allcraftitems' href="#">All Craft Items</Link>
+                  <Link to="/allcraftitems" href="#">
+                    All Craft Items
+                  </Link>
                 </li>
                 <li>
-                  <Link to='/addcraftitem' href="#">Add Craft Item</Link>
+                  <Link to="/addcraftitem" href="#">
+                    Add Craft Item
+                  </Link>
                 </li>
                 <li>
-                  <Link to='/mycraftitem' href="#">My Craft Item</Link>
+                  <Link to="/mycraftitem" href="#">
+                    My Craft Item
+                  </Link>
                 </li>
                 <li>
-                  <Link to='/login' href="#">Login</Link>
+                  <Link to="/login" href="#">
+                    Login
+                  </Link>
                 </li>
                 <li>
-                  <Link to='/register' href="#">Signup</Link>
+                  <Link to="/register" href="#">
+                    Signup
+                  </Link>
                 </li>
-               
               </ul>
             </div>
             <div className="space-y-3">
@@ -90,6 +101,9 @@ const Footer = () => {
                 <a
                   rel="noopener noreferrer"
                   href="#"
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="Facebook"
+                  data-tooltip-place="top"
                   title="Facebook"
                   className="flex items-center p-1"
                 >
@@ -106,6 +120,9 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   href="#"
                   title="Twitter"
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="Twitter"
+                  data-tooltip-place="top"
                   className="flex items-center p-1"
                 >
                   <svg
@@ -118,6 +135,9 @@ const Footer = () => {
                 </a>
                 <a
                   rel="noopener noreferrer"
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="Instagram"
+                  data-tooltip-place="top"
                   href="#"
                   title="Instagram"
                   className="flex items-center p-1"

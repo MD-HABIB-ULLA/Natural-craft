@@ -17,7 +17,7 @@ const MyCraftItem = () => {
 
   useEffect(() => {
     if (user.email) {
-      fetch(`http://localhost:4000/mycarft/${user.email}`)
+      fetch(`https://project-10-server-topaz.vercel.app/mycarft/${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           setFilteredCraftItems(data);
@@ -30,7 +30,7 @@ const MyCraftItem = () => {
   console.log(filteredCraftItems);
   const handlecustomaiseBtn = (text) => {
     if (text) {
-      fetch(`http://localhost:4000/customaize/${text}`)
+      fetch(`https://project-10-server-topaz.vercel.app/customaize/${text}`)
         .then((res) => res.json())
         .then((datas) => {
           setCraftData(datas.filter((data) => data.user_email === user.email));

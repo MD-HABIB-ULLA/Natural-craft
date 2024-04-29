@@ -8,7 +8,7 @@ import { useContext, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 const Navber = () => {
   const { user, signOutUser, loading } = useContext(AuthContext);
-  console.log({ loading });
+  console.log(loading, user);
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -117,7 +117,13 @@ const Navber = () => {
 
         <div className="navbar-end flex gap-4 items-center">
           <div className="text-[#E4C59E] text-2xl">
-            <ThemeBtn />
+            <a
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content="Change theme"
+              data-tooltip-place="left"
+            >
+              <ThemeBtn />
+            </a>
           </div>
           {loading ? (
             <span className="loading loading-spinner text-warning"></span>
@@ -128,11 +134,7 @@ const Navber = () => {
                   onMouseEnter={handleButtonHover}
                   className=" w-10 rounded-full ring ring-[#E4C59E] dark:ring-[#e4c49e69] ring-offset-white duration-500 ring-offset-2"
                 >
-                  <img
-                    src={user.photoURL}
-                    alt="User Avatar"
-                    className=""
-                  />
+                  <img src={user.photoURL} alt="User Avatar" className="" />
                 </div>
                 {isDropdownOpen && (
                   <div
