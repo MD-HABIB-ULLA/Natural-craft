@@ -1,4 +1,5 @@
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 
 const AllCraftItems = () => {
@@ -6,6 +7,9 @@ const AllCraftItems = () => {
   console.log(craftData);
   return (
     <div>
+      <Helmet>
+        <title>Natural craft - All craft item</title>
+      </Helmet>
       <div
         style={{
           backgroundImage:

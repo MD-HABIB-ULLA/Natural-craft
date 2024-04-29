@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 
 const Deatails = () => {
   const data = useLoaderData();
   return (
     <div className="min-h-screen">
+        <Helmet>
+        <title>Natural craft - {data.item_name}</title>
+      </Helmet>
       <div className="grid mt-10 lg:grid-cols-4  md:grid-cols-3 grid-cols-1 container m-auto px-10">
         <div className="lg:col-span-3 md:col-span-2 p-10 flex items-center  justify-center bg-[#0e02022f] rounded-lg">
           {" "}

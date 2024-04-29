@@ -2,6 +2,7 @@ import { useContext } from "react";
 import bg from "../assets/animatedbg.svg";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const Additem = () => {
   const { user, loading } = useContext(AuthContext);
@@ -50,6 +51,9 @@ const Additem = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Natural craft - Add item</title>
+      </Helmet>
       {loading ? (
         <div className=" min-h-screen flex items-center justify-center">
           <span className="h-16 w-16 loading loading-spinner text-warning"></span>

@@ -3,6 +3,7 @@ import bg from "../assets/animatedbg.svg";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const UpdataePage = () => {
   const { user, loading } = useContext(AuthContext);
@@ -52,6 +53,9 @@ const UpdataePage = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Natural craft - {data.item_name}</title>
+      </Helmet>
       {loading ? (
         <div className=" min-h-screen flex items-center justify-center">
           <span className="h-16 w-16 loading loading-spinner text-warning"></span>
