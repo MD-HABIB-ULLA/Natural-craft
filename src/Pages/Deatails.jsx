@@ -41,7 +41,7 @@ const Deatails = () => {
             </h1>
             <h1 className="dark:text-white text-[#361A19]">
               <span className="dark:text-[#AF8360] text-[#361A19] font-bold">Price : </span>
-              {data.price}
+              {data.price} tk
             </h1>
           </div>
           
