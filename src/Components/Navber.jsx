@@ -40,7 +40,7 @@ const Navber = () => {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          `text-base px-3 p-1  ml-2 text-white   sm:text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
+          `text-base px-3 p-1  ml-2 text-white   lg:text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
             isActive
               ? " font-bold rounded-lg bg-[#e4c49e41]  "
               : "font-normal  border-none"
@@ -52,19 +52,19 @@ const Navber = () => {
       <NavLink
         to="/allcraftitems"
         className={({ isActive }) =>
-          `text-base px-3 p-1 text-white  ml-2 sm:text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
+          `text-base px-3 p-1 text-white  ml-2 lg:text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
             isActive
               ? " font-bold rounded-lg  bg-[#e4c49e41]"
               : "font-normal  border-none"
           } `
         }
       >
-        All Jute & wooden Crafts Items
+        All Crafts Items
       </NavLink>
       <NavLink
         to="/addcraftitem"
         className={({ isActive }) =>
-          `text-base px-3 p-1  text-white ml-2 sm:text-[#322C2B] duration-500 dark:text-[#E4C59E]  ${
+          `text-base px-3 p-1  text-white ml-2 lg:text-[#322C2B] duration-500 dark:text-[#E4C59E]  ${
             isActive
               ? " font-bold rounded-lg  bg-[#e4c49e41]"
               : "font-normal  border-none"
@@ -76,7 +76,7 @@ const Navber = () => {
 
       <NavLink
         className={({ isActive }) =>
-          `text-base px-3 p-1  text-white ml-2 sm:text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
+          `text-base px-3 p-1  text-white ml-2 lg:text-[#322C2B] duration-500 dark:text-[#E4C59E] ${
             isActive
               ? " font-bold rounded-lg  bg-[#e4c49e41] "
               : "font-normal  border-none"
@@ -84,19 +84,19 @@ const Navber = () => {
         }
         to="/mycraftitem"
       >
-        My Jute & wooden Crafts List
+        My Crafts List
       </NavLink>
     </>
   );
   return (
-    <div className=" border-b-2 border-[#e4c49e69] ">
+    <div className=" border-b-2 border-[#e4c49e69] px-5  ">
       <div className="navbar container m-auto ">
         <div className="navbar-start">
           <div className="dropdown">
             <div
               tabIndex={0}
               role="button"
-              className="btn hover:bg-transparent bg-transparent border-none  text-2xl text-[#E4C59E] lg:hidden"
+              className=" hover:bg-transparent bg-transparent border-none  text-2xl text-[#E4C59E] lg:hidden"
             >
               <FaBarsStaggered />
             </div>
@@ -107,7 +107,7 @@ const Navber = () => {
               {list}
             </ul>
           </div>
-          <a className="btn hover:bg-transparent bg-transparent border-none text-xl">
+          <a className="h-12 hover:bg-transparent bg-transparent border-none text-xl">
             <img className="h-full" src={logo} alt="" />
           </a>
         </div>

@@ -10,9 +10,9 @@ const AllCraftItems = () => {
           backgroundImage:
             "url(https://i.ibb.co/Hpgwm8C/woodpeckers-craft-wood-scaled.jpg",
         }}
-        className="bg-cover bg-center text-[#fff] capitalize text-5xl font-bold p-20  "
+        className="bg-cover bg-center text-[#fff] capitalize   "
       >
-        craft items
+        <p className="md:text-5xl font-bold md:p-20 p-10 text-3xl bg-[#1a050598]">craft items</p>
       </div>
       <div>
         <div className=" p-3">

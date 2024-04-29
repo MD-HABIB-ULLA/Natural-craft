@@ -99,9 +99,9 @@ const MyCraftItem = () => {
           backgroundImage:
             "url(https://i.postimg.cc/bwT9t6Kg/293032355-489598309833569-7450587253101489347-n.jpg)",
         }}
-        className="bg-cover bg-center text-[#fff] capitalize text-5xl font-bold p-20  "
+        className="bg-cover bg-center text-[#fff] capitalize   "
       >
-        My craft items
+      <p className="md:text-5xl font-bold md:p-20 p-10 text-3xl bg-[#1a050598]">My craft items</p>
       </div>
       <div>
         {filteredCraftItems?.length !== 0 ? (

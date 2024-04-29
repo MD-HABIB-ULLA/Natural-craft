@@ -226,7 +226,7 @@ const Home = () => {
         <div className="text-5xl mb-10 text-center font-bold mt-20 dark:text-white text-[#361A19]">
           <h1>Jute & wooden Crafts Categories</h1>
         </div>
-        <div className=" grid grid-cols-2 container m-auto px-10 my-10 gap-10">
+        <div className=" grid grid-cols-2  container m-auto px-10 my-10 lg:gap-10 md:gap-5 gap-3">
           {catagories.map((category, i) => (
             <div key={i} className=" h-60">
               <div
@@ -237,7 +237,7 @@ const Home = () => {
               >
                 <Link
                   to={`/category/${category.subcategory_name}`}
-                  className="flex items-end justify-start h-full w-full bg-gradient-to-t from-gray-900 hover:bg-[#0f02029c] duration-500 text-3xl pb-3 hover:pb-5 pl-3 font-bold rounded-2xl"
+                  className="flex items-end justify-start h-full w-full bg-gradient-to-t from-gray-900 hover:bg-[#0f02029c] duration-500 md:text-3xl text-xl  pb-3 hover:pb-5 pl-3 font-bold rounded-2xl"
                 >
                   {category.subcategory_name}
                 </Link>

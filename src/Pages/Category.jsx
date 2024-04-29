@@ -13,11 +13,11 @@ const Category = () => {
           backgroundImage:
             "url(https://i.ibb.co/KbLHwYB/wooden-furniture.jpg)",
         }}
-        className="bg-cover bg-center text-[#fff] capitalize text-5xl font-bold p-20  "
+        className="bg-cover bg-center text-[#fff] capitalize   "
       >
-        {craftData[0].subcategory_name}
+       <p className="md:text-5xl font-bold md:p-20 p-10 text-3xl bg-[#1a050598]"> {craftData[0].subcategory_name}</p>
       </div>
-      <div className=" grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1 my-20 container m-auto gap-3">
+      <div className=" grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1 my-20 container m-auto gap-3 px-3">
         {craftData.map((singleCraftItem, i) => (
           <div
             key={i}
