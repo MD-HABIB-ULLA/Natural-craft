@@ -8,6 +8,7 @@ import { ImBin2 } from "react-icons/im";
 import bg from "../assets/mycrafitem.svg";
 import { FaStar } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { Fade } from "react-awesome-reveal";
 
 const MyCraftItem = () => {
   const [craftData, setCraftData] = useState([]);
@@ -101,9 +102,11 @@ const MyCraftItem = () => {
         }}
         className="bg-cover bg-center text-[#fff] capitalize   "
       >
-        <p className="md:text-5xl font-bold md:p-20 p-10 text-3xl bg-[#1a050598]">
-          My craft items
-        </p>
+        <Fade>
+          <p className="md:text-5xl font-bold md:p-20 p-10 text-3xl bg-[#1a050598]">
+            My craft items
+          </p>
+        </Fade>
       </div>
       <div>
         {loading ? (

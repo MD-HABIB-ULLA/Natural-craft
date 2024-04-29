@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import { Link, useLoaderData } from "react-router-dom";
 
 const AllCraftItems = () => {
@@ -12,7 +13,11 @@ const AllCraftItems = () => {
         }}
         className="bg-cover bg-center text-[#fff] capitalize   "
       >
-        <p className="md:text-5xl font-bold md:p-20 p-10 text-3xl bg-[#1a050598]">craft items</p>
+        <Fade>
+          <p className="md:text-5xl font-bold md:p-20 p-10 text-3xl bg-[#1a050598]">
+            craft items
+          </p>
+        </Fade>
       </div>
       <div>
         <div className=" p-3">
@@ -88,13 +93,14 @@ const AllCraftItems = () => {
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                      <Link to={`/craftItems/${singleCraftItem._id}`}
-                        data-ripple-light="true"
-                        type="button"
-                        className="btn border-none bg-[#e4c49e]  font-bold hover:bg-[#e4c49e93]"
-                      >
-                        View Details
-                      </Link>
+                        <Link
+                          to={`/craftItems/${singleCraftItem._id}`}
+                          data-ripple-light="true"
+                          type="button"
+                          className="btn border-none bg-[#e4c49e]  font-bold hover:bg-[#e4c49e93]"
+                        >
+                          View Details
+                        </Link>
                       </td>
                     </tr>
                   ))}

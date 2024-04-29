@@ -1,5 +1,5 @@
 // import bg from "../assets/bg.svg"
-
+import { Helmet } from "react-helmet";
 import { Navigation, A11y, Autoplay } from "swiper/modules";
 import { BsCashCoin } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,6 +12,7 @@ import "swiper/css/scrollbar";
 import { Link, useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
+import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
   const craftData = useLoaderData();
@@ -36,6 +37,9 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Natural craft - Home</title>
+      </Helmet>
       <div>
         {/* swiper */}
         <div className=" w-full md:px-10 px-3 mt-3 h-[70vh]  mb-10">
@@ -65,10 +69,12 @@ const Home = () => {
                   <div className="hero-overlay  bg-transparent bg-gradient-to-r from-[#1a0303f6]"></div>
                   <div className="md:ml-10 ml-5 hero-content text-left text-neutral-content ">
                     <div className="">
-                      <h1 className="mb-5 md:text-5xl text-3xl font-bold w-full">
-                        The Environmental Benefits of <br /> Jute & Wooden
-                        Crafts
-                      </h1>
+                      <Fade>
+                        <h1 className="mb-5 md:text-5xl text-3xl font-bold w-full">
+                          The Environmental Benefits of <br /> Jute & Wooden
+                          Crafts
+                        </h1>
+                      </Fade>
                       <p className="mb-5 md:w-1/2">
                         Jute and wood are natural, biodegradable materials,
                         making them eco-friendly choices for crafting. Unlike
@@ -92,10 +98,12 @@ const Home = () => {
                   <div className="hero-overlay  bg-transparent bg-gradient-to-r from-[#1a0303f6]"></div>
                   <div className="md:ml-10 ml-5 hero-content text-left text-neutral-content ">
                     <div className="">
-                      <h1 className="mb-5 md:text-5xl text-3xl font-bold w-full h-full ">
-                        The Promise of Renewable Resources <br /> in Jute &
-                        Wooden Crafts
-                      </h1>
+                      <Fade>
+                        <h1 className="mb-5 md:text-5xl text-3xl font-bold w-full h-full ">
+                          The Promise of Renewable Resources <br /> in Jute &
+                          Wooden Crafts
+                        </h1>
+                      </Fade>
                       <p className="mb-5 md:w-1/2">
                         Jute and wood are renewable resources that can be
                         harvested sustainably. This means that they can be
@@ -119,9 +127,12 @@ const Home = () => {
                   <div className="hero-overlay  bg-transparent bg-gradient-to-r from-[#1a0303f6]"></div>
                   <div className="md:ml-10 ml-5 hero-content text-left text-neutral-content ">
                     <div className="">
-                      <h1 className="mb-5 md:text-5xl text-3xl font-bold w-full h-full ">
-                        The Enduring Durability of <br /> Jute & Wooden Crafts
-                      </h1>
+                      <Fade>
+                        <h1 className="mb-5 md:text-5xl text-3xl font-bold w-full h-full ">
+                          The Enduring Durability of <br /> Jute & Wooden Crafts
+                        </h1>
+                      </Fade>
+
                       <p className="mb-5 md:w-1/2">
                         Jute and wood are known for their durability and
                         strength. Crafts made from these materials are
@@ -378,11 +389,19 @@ const Home = () => {
             </h3>
             <p className="mb-4">
               Be inspired by our community's creative craft projects!
-            </p> 
+            </p>
             <div className="grid md:grid-cols-2 grid-cols-1 gap-4 bg-[#0502024b] p-10 rounded-lg">
               {/* Display images of finished projects */}
-              <img className="h-96" src="https://shagunarts.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/7/1/718qryzba3l._sx569_.jpg" alt="Project 1" />
-              <img className="h-96" src="https://shagunarts.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/v/avian-solid-wood-book-shelf-in-provincial-teak-finish-by-woodsworth-avian-solid-wood-book-shelf-in-p-xpkwfo.jpg" alt="Project 2" />
+              <img
+                className="h-96"
+                src="https://shagunarts.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/7/1/718qryzba3l._sx569_.jpg"
+                alt="Project 1"
+              />
+              <img
+                className="h-96"
+                src="https://shagunarts.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/v/avian-solid-wood-book-shelf-in-provincial-teak-finish-by-woodsworth-avian-solid-wood-book-shelf-in-p-xpkwfo.jpg"
+                alt="Project 2"
+              />
               {/* Add more images */}
             </div>
           </section>

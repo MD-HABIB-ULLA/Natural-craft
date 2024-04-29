@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import { BsCashCoin } from "react-icons/bs";
 import { FaStar } from "react-icons/fa";
 import { MdOutlineDryCleaning } from "react-icons/md";
@@ -10,12 +11,16 @@ const Category = () => {
     <div className="min-h-screen  ">
       <div
         style={{
-          backgroundImage:
-            "url(https://i.ibb.co/KbLHwYB/wooden-furniture.jpg)",
+          backgroundImage: "url(https://i.ibb.co/KbLHwYB/wooden-furniture.jpg)",
         }}
         className="bg-cover bg-center text-[#fff] capitalize   "
       >
-       <p className="md:text-5xl font-bold md:p-20 p-10 text-3xl bg-[#1a050598]"> {craftData[0].subcategory_name}</p>
+        <Fade>
+          <p className="md:text-5xl font-bold md:p-20 p-10 text-3xl bg-[#1a050598]">
+            {" "}
+            {craftData[0].subcategory_name}
+          </p>
+        </Fade>
       </div>
       <div className=" grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1 my-20 container m-auto gap-3 px-3">
         {craftData.map((singleCraftItem, i) => (
