@@ -1,10 +1,20 @@
+import { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Helmet } from "react-helmet";
-import { Link, useLoaderData } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { fetchData } from "../reducers/craft";
 
 const AllCraftItems = () => {
-  const craftData = useLoaderData();
-  console.log(craftData);
+
+  const dispatch = useDispatch();
+  const { data : craftData, status, error } = useSelector((state) => state.craftItem);
+  console.log(craftData, status, error);
+
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
+  // console.log(craftData);
   return (
     <div>
       <Helmet>

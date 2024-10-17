@@ -13,6 +13,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { Fade } from "react-awesome-reveal";
+import Navber from "../Components/Navber";
 
 const Home = () => {
   const craftData = useLoaderData();
@@ -40,6 +41,7 @@ const Home = () => {
       <Helmet>
         <title>Natural craft - Home</title>
       </Helmet>
+      <Navber />
       <div>
         {/* swiper */}
         <div className=" w-full md:px-10 px-3 mt-3 h-[70vh]  mb-10">

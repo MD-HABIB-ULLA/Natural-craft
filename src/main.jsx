@@ -15,6 +15,10 @@ import PrivateRoute from "./Private/PrivateRoute.jsx";
 import Deatails from "./Pages/Deatails.jsx";
 import UpdataePage from "./Pages/UpdataePage.jsx";
 import Category from "./Pages/Category.jsx";
+import { Provider } from "react-redux";
+import store from "./store.js";
+import ReduxLearning from "./Pages/ReduxLearning.jsx";
+import ReduxObject from "./Pages/ReduxObject.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +28,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("https://project-10-server-topaz.vercel.app/craftItems"),
+        loader: () =>
+          fetch("https://project-10-server-topaz.vercel.app/craftItems"),
         element: <Home />,
       },
       {
@@ -36,9 +41,19 @@ const router = createBrowserRouter([
         element: <Ragister />,
       },
       {
+        path: "/redux",
+        element: <ReduxLearning />,
+      },
+      {
+        path: "/Obj",
+        element: <ReduxObject />,
+      },
+      {
         path: "/craftItems/:id",
         loader: ({ params }) =>
-          fetch(`https://project-10-server-topaz.vercel.app/craftItems/${params.id}`),
+          fetch(
+            `https://project-10-server-topaz.vercel.app/craftItems/${params.id}`
+          ),
         element: (
           <PrivateRoute>
             <Deatails />
@@ -48,7 +63,9 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         loader: ({ params }) =>
-          fetch(`https://project-10-server-topaz.vercel.app/craftItems/${params.id}`),
+          fetch(
+            `https://project-10-server-topaz.vercel.app/craftItems/${params.id}`
+          ),
         element: (
           <PrivateRoute>
             <UpdataePage />
@@ -65,17 +82,22 @@ const router = createBrowserRouter([
       },
       {
         path: "/category/:subcategory_name",
-        loader: ({ params }) =>fetch(`https://project-10-server-topaz.vercel.app/category/${params.subcategory_name}`),
+        loader: ({ params }) =>
+          fetch(
+            `https://project-10-server-topaz.vercel.app/category/${params.subcategory_name}`
+          ),
         element: <Category />,
       },
       {
         path: "/allcraftitems",
-        loader: () => fetch("https://project-10-server-topaz.vercel.app/craftItems"),
+        loader: () =>
+          fetch("https://project-10-server-topaz.vercel.app/craftItems"),
         element: <AllCraftItems />,
       },
       {
         path: "/mycraftitem",
-        loader: () => fetch("https://project-10-server-topaz.vercel.app/craftItems"),
+        loader: () =>
+          fetch("https://project-10-server-topaz.vercel.app/craftItems"),
         element: (
           <PrivateRoute>
             <MyCraftItem />
@@ -88,8 +110,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+    <Provider store={store}>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </Provider>
   </React.StrictMode>
 );
